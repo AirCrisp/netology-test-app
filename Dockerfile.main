@@ -2,7 +2,7 @@ FROM mhart/alpine-node
 
 WORKDIR /APP
 
-COPY ./dist .
+COPY ./dist/main .
 COPY ./package*.json .
 
 RUN npm ci

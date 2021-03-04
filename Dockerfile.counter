@@ -1,0 +1,11 @@
+FROM mhart/alpine-node
+
+WORKDIR /APP
+
+COPY ./dist/counter .
+COPY ./package*.json .
+
+RUN npm ci
+EXPOSE 3001
+
+CMD [ "node", "main.js" ]
